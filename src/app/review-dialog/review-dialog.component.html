@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>Review Investment</h2>
+<mat-dialog-content>
+  <p><strong>Asset Type:</strong> {{data.assetType}}</p>
+  <p><strong>Quantity:</strong> {{data.quantity}}</p>
+  <p><strong>Purchase Price:</strong> {{ data.purchasePrice | currency }}</p>
+  <p><strong>Purchase Date:</strong> {{data.purchaseDate | date}}</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="confirm()">Confirm</button>
+</mat-dialog-actions>

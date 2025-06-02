@@ -1,0 +1,37 @@
+/* Center the form container */
+.container {
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 16px;
+}
+
+/* Style the card */
+mat-card {
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+/* Add spacing between form fields */
+mat-form-field {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 500px) {
+  .container {
+    margin: 20px 12px;
+    padding: 12px;
+  }
+}
