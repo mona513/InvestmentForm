@@ -1,18 +1,25 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject } from "@angular/core";
 import {
   MAT_DIALOG_DATA,
   MatDialogRef,
   MatDialogModule,
-} from '@angular/material/dialog';
-import { CommonModule } from '@angular/common';
-import { MatButtonModule } from '@angular/material/button';
+} from "@angular/material/dialog";
+import { CommonModule, CurrencyPipe, DecimalPipe } from "@angular/common";
+import { MatButtonModule } from "@angular/material/button";
+import { InvestmentValuePipe } from "../investment-value.pipe";
 
 @Component({
-  selector: 'app-review-dialog',
+  selector: "app-review-dialog",
   standalone: true,
-  imports: [CommonModule, MatDialogModule, MatButtonModule],
-  templateUrl: './review-dialog.component.html',
-  styleUrl: './review-dialog.component.scss',
+  imports: [
+    CommonModule,
+    MatDialogModule,
+    MatButtonModule,
+    InvestmentValuePipe,
+  ],
+  templateUrl: "./review-dialog.component.html",
+  styleUrl: "./review-dialog.component.scss",
+  providers: [CurrencyPipe, DecimalPipe],
 })
 export class ReviewDialogComponent {
   constructor(
@@ -21,7 +28,7 @@ export class ReviewDialogComponent {
   ) {}
 
   confirm(): void {
-    this.dialogRef.close('confirm');
+    this.dialogRef.close("confirm");
   }
 
   cancel(): void {
