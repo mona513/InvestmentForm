@@ -40,8 +40,8 @@ This is a web-based Angular application for managing financial portfolios. It al
 1. Clone the repository:
 
    ```bash
-   git clone <your-repo-url>
-   cd your-repo-folder
+   git clone https://github.com/mona513/InvestmentForm
+   cd InvestmentForm
 
    ```
 
